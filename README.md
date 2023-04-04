@@ -3,7 +3,7 @@ This is a modified Github project that uses Convolutional Neural Network (CNN) m
 
 ## Steps to run
 All you need to run this project is a Google colab notebook.
-Here is the link to colab notebook: 
+Here is the link to colab notebook: https://colab.research.google.com/drive/1MtqiaRlYIEEUnt7zO3SdGoDpQ4oS0a9u?usp=sharing
 - make a copy of the file
 - File -> Save a copy on Drive 
 
