@@ -44,7 +44,6 @@ def create_dataset(data_dir="/content/project-tomato/PlantVillage-Tomato"):
     # Reading the labels
     labels_dict = {}
     for filename in train_files:
-        # print(filename)
         label = filename.split("/")[5].split('___')[1]
         print(label)
         labels_dict[label] = labels_dict.get(label, 0) + 1
@@ -154,7 +153,6 @@ def arrangeDataset(rawDataDir="/content/PlantVillage-Tomato/Plant_leave_diseases
 
     for imageFolder in imageFolders:
         if imageFolder.startswith("Tomato__"):
-            print(imageFolder)
             shutil.copytree(os.path.join(rawDataDir, imageFolder), os.path.join(newDataDir, "All-Tomato", imageFolder))
             for split in ["Train", "Val", "Test"]:
                 os.makedirs(os.path.join(newDataDir, split, imageFolder), exist_ok=True)
