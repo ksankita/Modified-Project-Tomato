@@ -23,8 +23,10 @@ pretrained_model = keras.models.load_model(os.path.join("/content/project-tomato
 print(pretrained_model.summary())
 
 # predictions = tf.argmax(pretrained_model.predict(test_generator), axis=1)
-
+print("__________________________________________________________________________\n")
+print("__________________________________________________________________________\n")
 result = pretrained_model.evaluate(test_generator)
-for each, val in zip(['loss','accuracy','MSE'],result):
+for each, val in zip(['loss','accuracy'],result[:2]):
   print(each,' : ',round(val*100,2))
+print('MSE : ',result[2])
 
