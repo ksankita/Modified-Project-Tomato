@@ -126,7 +126,7 @@ def scanOldDataset(dataDir="/content/PlantVillage-Tomato"):
             print(exp)
 
 
-def extractZip(filename, targetDir="/content/project-tomato/PlantVillage-Tomato"):
+def extractZip(filename, targetDir="/content/PlantVillage-Tomato"):
     with zipfile.ZipFile(filename, 'r') as zip_ref:
         if targetDir:
             zip_ref.extractall(targetDir)
@@ -218,14 +218,14 @@ if __name__ == "__main__":
     fileName = "PlantVillage-Tomato.zip"
     appDir = os.path.realpath(os.path.dirname(__file__))
     fileName = os.path.join(appDir, fileName)
-    # downloadFile(datasetUrl= datasetUrl, fileName=fileName)
+    downloadFile(datasetUrl= datasetUrl, fileName=fileName)
 
     # Extracting Files
-    # extractZip(filename="PlantVillage-Tomato.zip")
+    extractZip(filename="PlantVillage-Tomato.zip")
 
     ## Create the splits from experiments
     # scanOldDataset()
-    # arrangeDataset()
+    arrangeDataset()
     create_dataset()
     ## Taking out only the Tomato Image files for the project
 
