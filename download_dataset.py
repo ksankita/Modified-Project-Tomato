@@ -45,7 +45,7 @@ def create_dataset(data_dir="/content/project-tomato/PlantVillage-Tomato"):
     labels_dict = {}
     for filename in train_files:
         label = filename.split("/")[5].split('___')[1]
-        print(label)
+        # print(label)
         labels_dict[label] = labels_dict.get(label, 0) + 1
 
     labels = sorted(list(labels_dict.keys()))
@@ -78,7 +78,7 @@ def get_dataframe(filelist=None, labels_dict=None):
         labels_idx = []
         labels_name = []
         for filepath in filelist:
-            print(filepath)
+            # print(filepath)
             filenames.append(filepath)
             labels_name.append(filepath.split('/')[5].split('___')[1])
             labels_idx.append(str(labels.index(filepath.split('/')[5].split('___')[1])))
