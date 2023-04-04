@@ -8,6 +8,20 @@ This is a modified Github project that uses Convolutional Neural Network (CNN) m
 
 ## Credit to the code
 https://github.com/redwankarimsony/project-tomato
+```@article{ahmed2022less,  
+        author={Ahmed, Sabbir and Hasan, Md. Bakhtiar and Ahmed, Tasnim and Sony, Md. Redwan Karim and Kabir, Md. Hasanul},  
+        journal={{IEEE Access}},   
+        title={{Less is More: Lighter and Faster Deep Neural Architecture for Tomato Leaf Disease Classification}},   
+        year={2022},  
+        volume={},  
+        number={},  
+        pages={1-1},  
+        doi={10.1109/ACCESS.2022.3187203},
+        url={https://ieeexplore.ieee.org/document/9810234},
+        publisher={{IEEE}}
+        }
+```
+Visit the above link for indepth look at the paper and more information on the model.
 
 ## Model summary
 
