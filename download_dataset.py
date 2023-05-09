@@ -16,7 +16,7 @@ def downloadFile(datasetUrl, fileName, chunksize=4096):
     try:
         response = requests.get(datasetUrl, stream=True)
         total_length = int(response.headers.get('content-length'))
-        with open("PlantVillage-Tomato.zip", "wb") as f:
+        with open("Plant Disease Detection.zip", "wb") as f:
             for chunk in progress.bar(response.iter_content(chunk_size=chunksize),
                                       expected_size=(total_length / chunksize) + 1):
                 if chunk:
@@ -203,7 +203,7 @@ def deleteUnwanteFiles():
         print(exp)
 
     try:
-        os.remove("PlantVillage-Tomato.zip")
+        os.remove("Plant Disease Detection.zip")
         print("[INFO:] Removing the raw zipped data file. ")
     except Exception as exp:
         print(exp)
@@ -212,14 +212,14 @@ def deleteUnwanteFiles():
 
 if __name__ == "__main__":
     # Downloading Files
-    datasetUrl = "https://data.mendeley.com/public-files/datasets/tywbtsjrjv/files/d5652a28-c1d8-4b76-97f3-72fb80f94efc/file_downloaded"
-    fileName = "PlantVillage-Tomato.zip"
+    datasetUrl = "https://drive.google.com/drive/folders/1Bofbl_w5uQoUoMOJU5UgvSNcAOKxNKQF?usp=share_link"
+    fileName = "Plant Disease Detection.zip"
     appDir = os.path.realpath(os.path.dirname(__file__))
     fileName = os.path.join(appDir, fileName)
     downloadFile(datasetUrl= datasetUrl, fileName=fileName)
 
     # Extracting Files
-    extractZip(filename="PlantVillage-Tomato.zip")
+    extractZip(filename="Plant Disease Detection.zip")
 
     ## Create the splits from experiments
     # scanOldDataset()
