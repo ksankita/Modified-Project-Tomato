@@ -212,7 +212,7 @@ def deleteUnwanteFiles():
 
 if __name__ == "__main__":
     # Downloading Files
-    datasetUrl = "https://drive.google.com/drive/folders/1Bofbl_w5uQoUoMOJU5UgvSNcAOKxNKQF?usp=share_link"
+    datasetUrl = "/content/drive/MyDrive/hybrid cucumber leaf disease detection project/hybrid_cucmber_dataset"
     fileName = "Plant Disease Detection.zip"
     appDir = os.path.realpath(os.path.dirname(__file__))
     fileName = os.path.join(appDir, fileName)
